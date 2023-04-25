@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "vengadores";
+    src: url(avengeance/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+body {
+    background-image: url(images/fondo.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    color: rgb(248, 4, 4);
+    font-family: "vengadores";
+}
+
+.container_cards {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    transition: all ease 300ms;
+}
+
+.card:hover {
+    width: 350px;
+}
+
+.card .cover {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img {
+    height: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+    transition: all ease 400ms;
+}
+
+.card:hover .cover img {
+    top: 0px;
+    filter: none;
+}
+
+.card .img_back {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all ease 300ms;
+}
+
+
+/*Pseudo-clase :nth-of-type() en CSS selecciona uno o más elementos de un tipo dado,
+pueden ser p, img, videos, etc. en función de su posición los situa entre un grupo de hermanos*/
+
+.card:nth-of-type(1) .img_back {
+    background-image: url(images/bg1.png);
+}
+
+.card:nth-of-type(2) .img_back {
+    background-image: url(images/bg2.png);
+}
+
+.card:nth-of-type(3) .img_back {
+    background-image: url(images/bg3.png);
+}
+
+.card:nth-of-type(4) .img_back {
+    background-image: url(images/bg4.png);
+}
+
+.card:nth-of-type(5) .img_back {
+    background-image: url(images/bg5.png);
+}
+
+.card:hover .img_back {
+    bottom: -40px;
+}
+
+.card .description {
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all ease 300ms;
+}
+
+.card:hover .description {
+    padding: 40px;
+}
+
+.card .description h2 {
+    margin-top: 10px;
+    font-family: "vengadores";
+}
+
+.card .description p {
+    margin-top: 10px;
+}
+
+.card .description input {
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #A6359D;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all ease 300ms;
+}
+
+.card .description input:hover {
+    background: #c79dc3;
+}
